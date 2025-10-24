@@ -1,0 +1,192 @@
+/* ---------- GLOBAL ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  background-color: #002147;
+}
+
+.navbar-brand,
+.nav-link,
+.footer-text {
+  color: #ff6600 !important;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffb366 !important;
+  text-shadow: 0 0 4px rgba(255, 165, 0, 0.6);
+}
+
+.nav-link.active {
+  color: #ffffff !important;
+  background-color: #ff6600 !important;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  /* background image + readability overlay */
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("../images/gallery/optima_sunset.jpg") center/cover no-repeat;
+
+  color: #fff;
+  text-align: center;
+  padding: 110px 0;
+  min-height: 85vh;
+  background-position: center 32%;}
+
+.hero h1 {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+/* ---------- PACKAGE CARDS ---------- */
+.package-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  border-radius: 12px;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ---------- GALLERY ---------- */
+#galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Better image and video clarity */
+.gallery-card img,
+.gallery-card video {
+  width: 100%;
+  height: auto; /* keep natural aspect ratio */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  image-rendering: auto; /* allow browser to use high-quality scaling */
+}
+
+.gallery-card img:hover,
+.gallery-card video:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.caption {
+  padding: 0.75rem 1rem;
+}
+
+.caption h3 {
+  font-size: 1.1rem;
+  color: #002147;
+}
+
+.caption .tag {
+  font-size: 0.85rem;
+  color: #ff6600;
+  font-weight: 600;
+}
+
+/* Progress bar below gallery */
+#progressWrapper {
+  width: 100%;
+  height: 6px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff6600, #ffa64d);
+  transition: width 0.1s linear;
+}
+
+/* ---------- FORMS ---------- */
+form label span.text-danger {
+  font-weight: bold;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #002147;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ffb366;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ---------- GALLERY FILTER BUTTONS ---------- */
+.filter-bar {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.filter-btn {
+  border: 2px solid #ff6600;
+  background-color: transparent;
+  color: #ff6600;
+  font-weight: 600;
+  margin: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #ff6600;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+}
+
+.filter-btn.active {
+  background-color: #ff6600;
+  color: white;
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.6);
+  transform: scale(1.05);
+}
