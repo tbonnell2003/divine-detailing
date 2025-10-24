@@ -15,7 +15,7 @@ const progressBar = document.getElementById("progressBar");
 // Load gallery data
 async function loadGallery() {
   try {
-    const response = await fetch("https://raw.githubusercontent.com/tbonnell2003/divine-detailing/refs/heads/main/Midterm/data.json");
+    const response = await fetch("https://raw.githubusercontent.com/tbonnell2003/divine-detailing/refs/heads/main/data.json");
     const data = await response.json();
     galleryData = data.gallery;
     displayBatch(galleryData);
