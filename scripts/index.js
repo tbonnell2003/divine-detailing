@@ -2,7 +2,7 @@
    Uses: fetch + async/await, DOM, map/filter, arrow & callback functions, setTimeout, addEventListener
 */
 
-const DATA_URL = 'https://raw.githubusercontent.com/tbonnell2003/divine-detailing/refs/heads/main/data.json';
+const DATA_URL = './data.json';
 // ✅ Initialize EmailJS using Public Key
 emailjs.init("kAmeXSNfzH1VLBaHZ");
 
